@@ -1,0 +1,305 @@
+featureFlags:
+  flags:
+    - flag:
+        name: OPENFEATURE_TESTCASE_BOOL_FLAG_TRUE
+        identifier: OPENFEATURE_TESTCASE_BOOL_FLAG_TRUE
+        description: ""
+        permanent: false
+        spec:
+          type: boolean
+          default:
+            onVariation: "true"
+            offVariation: "false"
+          variations:
+            - identifier: "true"
+              value: "true"
+            - identifier: "false"
+              value: "false"
+        environments:
+          - identifier: develop
+            default:
+              onVariation: "true"
+              offVariation: "false"
+            state: "on"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: "true"
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: "false"
+    - flag:
+        name: OPENFEATURE_TESTCASE_BOOL_FLAG_FALSE
+        identifier: OPENFEATURE_TESTCASE_BOOL_FLAG_FALSE
+        description: ""
+        permanent: false
+        spec:
+          type: boolean
+          default:
+            onVariation: "true"
+            offVariation: "false"
+          variations:
+            - identifier: "true"
+              value: "true"
+            - identifier: "false"
+              value: "false"
+        environments:
+          - identifier: develop
+            default:
+              onVariation: "true"
+              offVariation: "false"
+            state: "off"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: "true"
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: "false"
+    - flag:
+        name: OPENFEATURE_TESTCASE_INTEGER_FLAG_VARIATION1
+        identifier: OPENFEATURE_TESTCASE_INTEGER_FLAG_VARIATION1
+        description: ""
+        permanent: false
+        spec:
+          type: int
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: "1"
+            - identifier: Variation2
+              value: "2"
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "on"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+    - flag:
+        name: OPENFEATURE_TESTCASE_INTEGER_FLAG_VARIATION2
+        identifier: OPENFEATURE_TESTCASE_INTEGER_FLAG_VARIATION2
+        description: ""
+        permanent: false
+        spec:
+          type: int
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: "1"
+            - identifier: Variation2
+              value: "2"
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "off"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+    - flag:
+        name: OPENFEATURE_TESTCASE_DOUBLE_FLAG_VARIATION1
+        identifier: OPENFEATURE_TESTCASE_DOUBLE_FLAG_VARIATION1
+        description: ""
+        permanent: false
+        spec:
+          type: int
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: "1.0"
+            - identifier: Variation1
+              value: "2.0"
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "on"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+    - flag:
+        name: OPENFEATURE_TESTCASE_DOUBLE_FLAG_VARIATION2
+        identifier: OPENFEATURE_TESTCASE_DOUBLE_FLAG_VARIATION2
+        description: ""
+        permanent: false
+        spec:
+          type: int
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: "1.0"
+            - identifier: Variation2
+              value: "2.0"
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "off"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+    - flag:
+        name: OPENFEATURE_TESTCASE_STRING_FLAG_VARIATION1
+        identifier: OPENFEATURE_TESTCASE_STRING_FLAG_VARIATION1
+        description: ""
+        permanent: true
+        spec:
+          type: string
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: Variation1
+            - identifier: Variation2
+              value: Variation2
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "on"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+
+    - flag:
+        name: OPENFEATURE_TESTCASE_STRING_FLAG_VARIATION2
+        identifier: OPENFEATURE_TESTCASE_STRING_FLAG_VARIATION2
+        description: ""
+        permanent: true
+        spec:
+          type: string
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: Variation1
+            - identifier: Variation2
+              value: Variation2
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "off"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+    - flag:
+        name: OPENFEATURE_TESTCASE_OBJECT_FLAG_VARIATION1
+        identifier: OPENFEATURE_TESTCASE_OBJECT_FLAG_VARIATION1
+        description: ""
+        permanent: false
+        spec:
+          type: json
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: '{"key":"value1"}'
+            - identifier: Variation2
+              value: '{"key":"value2"}'
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "on"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+    - flag:
+        name: OPENFEATURE_TESTCASE_OBJECT_FLAG_VARIATION2
+        identifier: OPENFEATURE_TESTCASE_OBJECT_FLAG_VARIATION2
+        description: ""
+        permanent: false
+        spec:
+          type: json
+          default:
+            onVariation: Variation1
+            offVariation: Variation2
+          variations:
+            - identifier: Variation1
+              value: '{"key":"value1"}'
+            - identifier: Variation2
+              value: '{"key":"value2"}'
+        environments:
+          - identifier: develop
+            default:
+              onVariation: Variation1
+              offVariation: Variation2
+            state: "on"
+            targetRules:
+              - targets:
+                  - identifier: target1
+                  - identifier: target2
+                variation: Variation1
+              - targets:
+                  - identifier: target3
+                  - identifier: target4
+                variation: Variation2
+  projectIdentifier: CloudApps
+  orgIdentifier: TriNet

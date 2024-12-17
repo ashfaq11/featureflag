@@ -1,0 +1,14 @@
+
+<h3>Feature Flag: {{finalResult}} </h3> 
+
+<input type="text" [(ngModel)]="inputValue" placeholder="Enter Target" />
+
+<button type="button" (click)="myClickFunction(inputValue)" > Boolean flag details </button>
+
+<button type="button" (click)="myClickFunctionString(inputValue)" > String flag details </button>
+
+<button type="button" (click)="myClickFunctionNumber(inputValue)" > Number flag details </button>
+
+<button type="button" (click)="myClickFunctionJSON(inputValue)" > Json flag details </button>
+
+<router-outlet />
