@@ -1,6 +1,7 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr';
 import express from 'express';
+import cors from 'cors';  // Import CORS package
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
@@ -14,11 +15,21 @@ export function app(): express.Express {
 
   const commonEngine = new CommonEngine();
 
+  // Allow all CORS requests for testing (open, insecure)
+  server.use(
+    cors({
+      origin: '*', // Allow all origins
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow common HTTP methods
+      allowedHeaders: '*', // Allow all headers
+    })
+  );
+
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
+
   // Serve static files from /browser
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
