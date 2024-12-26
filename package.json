@@ -24,7 +24,7 @@
     "@angular/ssr": "^17.3.2",
     "dotenv": "^16.4.7",
     "js-yaml": "^4.1.0",
-    "lib-ts-featureflag": "./lib/lib-ts-featureflag-1.0.0.tgz",
+    "lib-ts-featureflag": "./lib-ts-featureflag-1.0.0-new.tgz",
     "process": "^0.11.10",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
