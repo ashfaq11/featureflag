@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Context, FeatureFlagProvider, LocalFeatureFlagProvider } from 'lib-ts-featureflag';
 import { environment } from '../environments/environment';
-import * as YAML from 'yaml';
+//import * as YAML from 'yaml';
 import { YamlLoaderService } from './services/yaml-loader.service';
 
 @Component({
